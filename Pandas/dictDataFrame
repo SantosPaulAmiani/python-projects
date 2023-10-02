@@ -1,0 +1,10 @@
+import numpy as pd
+import pandas as pd
+
+states = ['Eregi','Kitale', 'Busia', 'Mbale', 'Kisauni']
+population = [10000, 70000, 32000, 23000, 56000]
+
+dicti = {'States':states, 'Population':population}
+
+df = pd.DataFrame(dicti)
+print(df)

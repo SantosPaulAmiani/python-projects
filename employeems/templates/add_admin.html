@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Admin Section</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/metisMenu.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/default-css.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Your HTML content here -->
+        <form method="post">
+            {% csrf_token %}
+            <div class="card-body">
+                <p class="text-muted font-14 mb-4">Please fill up the form in order to add a new system administrator</p>
+
+                <div class="form-group">
+                    <label for="example-text-input" class="col-form-label">Full Name</label>
+                    <input class="form-control" name="fullname" type="text" required id="example-text-input">
+                </div>
+
+                <div class="form-group">
+                    <label for=" example-email-input" class="col-form-label">Email ID </label>
+                    <input class="form-control" name="email" type="email" autocomplete="off" required id="example-email-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="example-text-input" class="col-form-label">Username</label>
+                    <input class="form-control" name="username" type="text" autocomplete="off" required id="example-text-input">
+                </div>
+
+                <h4>Setting Passwords</h4>
+
+                <div class="form-group">
+                    <label for="example-text-input" class="col-form-label">Password</label>
+                    <input class="form-control" name="password" type="password" autocomplete="off" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="example-text-input" class="col-form-label">Confirmation Password</label>
+                    <input class="form-control" name="confirmpassword" type="password" autocomplete="off" required>
+                </div>
+
+                <button class="btn btn-primary" name="add" id="update" type="submit" onclick="return valid();">PROCEED</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
